@@ -4,8 +4,8 @@ Katzenpfote
 Introduction
 ------------
 
-Katzenpfote is a variation of the classic [Dvorak keyboard
-layout](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout)
+Katzenpfote is a variante of the classic
+[Dvorak keyboard layout](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Original_Dvorak_layout)
 but tailored to non-staggered or *grid* keyboards.  Examples of such
 keyboards are the
 [Kinesis Advantage Ergonomic](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
@@ -66,30 +66,30 @@ have `,` and `.` right below the numericals and, thus, in easy reach.
 
 When pressing SHIFT, it yields the shifted or *capital* layer:
 
-| ESC   | ℍ  | 𝔹  | 𝕍  | 𝔼  | 𝔽  | ℂ  | ℝ  | ℕ  | ℤ  | ℚ  | TAB   |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
-| Ü     | ;  | !  | ?  | P  | Y  | F  | G  | C  | R  | L  | Ö     |
+| ESC       | ℍ  | 𝔹  | 𝕍  | 𝔼  | 𝔽  | ℂ  | ℝ  | ℕ  | ℤ  | ℚ  | TAB       |
+|----------:|----|----|----|----|----|----|----|----|----|----|:----------|
+| Ü         | ;  | !  | ?  | P  | Y  | F  | G  | C  | R  | L  | Ö         |
 | **SHIFT** | A  | O  | E  | U  | I  | D  | H  | T  | N  | S  | **SHIFT** |
-| Ä     | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | 𝟙     |
+| Ä         | "  | Q  | J  | K  | X  | B  | M  | W  | V  | Z  | 𝟙         |
 
 The *symbol* layer looks as follows:
 
 | ESC   | d¨ | d˛ | d¸ | ´  | d´ | d\` | \` | €  | ¢  | £  | TAB   |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       | ∪  | +  | $  | [  | @  | %  | ]  | \  | &  | ∩  | ø     |
-| SHIFT | ~  | <  | -  | (  | ±  | _  | )  | /  | >  | ^  | SHIFT |
-| å     | “  | «  | =  | {  | #  | *  | }  | \| | »  | ”  | §     |
+|------:|----|----|----|----|----|-----|----|----|----|----|:------|
+|       | ∪  | +  | $  | [  | @  | %   | ]  | \  | &  | ∩  | ø     |
+| SHIFT | ~  | <  | -  | (  | ±  | _   | )  | /  | >  | ^  | SHIFT |
+| å     | “  | «  | =  | {  | #  | *   | }  | \| | »  | ”  | §     |
 
 Symbols prefixed with 'd' are dead keys.  Note how easy it is to press
 combinations such as `<-` or `~/` or `[]`.  When additionally pressing
 SHIFT, it yields a *shifted symbol* layer, which is full of more common
 UTF-8 characters:
 
-| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       | ⋃  | ∨  | …  | ⊊  | ⨉  | °  | ⊆  | ∙  | ∧  | ⋂  | Ø     |
+| ESC       | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB       |
+|----------:|----|----|----|----|----|----|----|----|----|----|:----------|
+|           | ⋃  | ∨  | …  | ⊊  | ⨉  | °  | ⊆  | ∙  | ∧  | ⋂  | Ø         |
 | **SHIFT** | ≈  | ≤  | ∅  | ∉  | ∓  | ∞  | ∈  | ∘  | ≥  | ∝  | **SHIFT** |
-| Å     | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  |       |
+| Å         | ∃  | ∥  | ≠  | ∫  | ∇  | ∆  | ⊤  | ⋅  | ⊥  | ∀  |           |
 
 When using the Katzenpfote layout, you have also access to a *greek
 layer*.  This layer is particularly useful, when writing mathematical
@@ -106,11 +106,11 @@ text in [TeX](http://tug.org/), as most TeX-dialects, such as
 
 When additionally pressing SHIFT, it yields the *capital greek* layer:
 
-| ESC   | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB   |
-|------:|----|----|----|----|----|----|----|----|----|----|:------|
-|       |    |    |    | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |       |
+| ESC       | 7  | 5  | 3  | 1  | 9  | 0  | 2  | 4  | 6  | 8  | TAB       |
+|----------:|----|----|----|----|----|----|----|----|----|----|:----------|
+|           |    |    |    | Π  | Υ  | Φ  | Γ  | Χ  | Ρ  | Λ  |           |
 | **SHIFT** | Α  | Ο  | Ε  | Ψ  | Ι  | Δ  | Η  | Τ  | Ν  | Σ  | **SHIFT** |
-|       |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |       |
+|           |    |    |    | Κ  | Ξ  | Β  | Μ  | Ω  | Θ  | Ζ  |           |
 
 
 In grid layouts, the thumbs can do a lot more than just pressing space:
