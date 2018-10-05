@@ -10,8 +10,8 @@ but tailored to non-staggered or *grid* keyboards.  Examples of such
 keyboards are the
 [Kinesis Advantage Ergonomic](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/), the
 [Maltron Ergonomic 3d](http://www.maltron.com/keyboard-info/dual-hand-fully-ergonomic-3d-keyboards), the
-[Key64](http://www.key64.org), or the
-[ErgoDox](http://ergodox.org/).
+[Key64](http://www.key64.org), the
+[ErgoDox](http://ergodox.org/), or the [TypeMatrix](http://www.typematrix.com/).
 The Dvorak layout itself is probably most famous for its arrangement of
 keys on the home row.  In fact, around 70% of keyboard strokes are
 happening on the home row when typing a typical English text.
@@ -137,42 +137,58 @@ description to this folder.
 # ln -s ~/.config/katzenpfote/kp kp
 ```
 
-Then apply the layout.
+Then apply the layout on a
+[Kinesis Advantage Ergonomic](https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/):
 
 ```
-% setxkbmap kp
+% setxkbmap kp kinesis
 ```
+
+Then apply the layout on a [TypeMatrix](http://www.typematrix.com/):
+
+```
+% setxkbmap kp typematrix
+```
+
 
 Meta keys
 ---------
 
 The X system has its own keyboard handling layer, in which scan codes
-are sent from your keyboard to X, these are mapped to key codes, which
-are then mapped to key symbols, which are then send to your program for
-interpretation.
+are send from your keyboard to X, these scan codes are mapped to key
+codes, who are then mapped to key symbols, which are then send to your
+program for interpretation.
 
 The layout description residing in the file `kp` has been tested for the
-Kinesis Advantage.  Katzenpfote builds on top of the X server key code
-table, i.e., it alters the `keycode`-`keysym`-table.
+Kinesis Advantage, the Kinesis Advantage 2, and the TypeMatrix.
+Katzenpfote builds on top of the X server key code table, i.e., it
+alters the `keycode`-`keysym`-table.
 
 This way you will likely not have any difficulties when using a
 different non-staggered keyboard.  In case you need to tweak the
 description, however, here is the mapping of the meta keys to `keycode`s
-and `keysym`s in `kp`.
+and `keysym`s in `kp` in the case of the Kinesis:
 
 | interpretation | `keycode` | `keysym` |
 |:---------------|--------:|-------:|
-| *symbol*   | BKSP      | ISO_Level3_Shift |
-| *greek*    | PGDN      | ISO_Level5_Shift |
-| **WM**     | END       | Super_L          |
+| *symbol*   | BKSP | ISO_Level3_Shift |
+| *greek*    | PGDN | ISO_Level5_Shift |
+| **WM**     | END  | Super_L          |
+
+And in cases of the TypeMatrix:
+
+| interpretation | `keycode` | `keysym` |
+|:---------------|--------:|-------:|
+| *symbol*   | ALTL | ISO_Level3_Shift |
+| *greek*    | ALTR | ISO_Level5_Shift |
 
 Trivia
 -------
 
-Katzenpfote is German and it literally translates to: "the paw of a
+Katzenpfote is German. It would literally translate to: "the paw of a
 cat".  However, Katzenpfote is also a [nautical
 term](http://www.sailingace.com/segellexikon/d/katzenpfote/katzenpfote.htm)
 used by German sailors to describe the characteristic pattern that a
-[light sea breeze](http://00tau.github.io/seebrise/) draws on calm see.
+light [sea breeze](http://00tau.github.io/seebrise/) draws on calm see.
 Katzenpfote is the standard keyboard layout in
 [Seebrise](http://00tau.github.io/seebrise/).
