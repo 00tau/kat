@@ -4,12 +4,17 @@ xkb_symbols "basic" {
     name[Group1]="Katzenpfote";
 
     key.type = "FOUR_LEVEL";
-
     key <SPCE> { [ space, space, Escape, Escape ] };
+
+    // Keyboard row number: +2
+
+    key.type = "ONE_LEVEL";
+
+    key <AE12> { [ Escape ] };
+    key <AE11> { [ Return ] };
 
     key.type = "THREE_LEVEL";
 
-    // Keyboard row number: +2
     key <AE01> { [ 7, U210D, dead_diaeresis ] };
     key <AE02> { [ 5, U1D539, dead_ogonek ] };
     key <AE03> { [ 3, U1D54D, dead_cedilla ] };
@@ -74,70 +79,36 @@ xkb_symbols "kinesis" {
     // Alphanumeric section
 
     key.type = "ONE_LEVEL";
-    key <ESC>  { [ Caps_Lock ] };
 
-    // Thumb row: upper right
-    key <RCTL> { [ Delete ] };
-    key <RALT> { [ Delete ] };
+    // Left side of keyboard
 
-    //key <RALT> { [ Multi_Key ] };
-    //key <PGUP> { [] };
+    key <CAPS> { [ Shift_L ] };
+    key <LFSH> { [ Caps_Lock ] };
 
-    // Thumb row: upper left
-    key <LCTL> { [ BackSpace ] };
-    key <LALT> { [ BackSpace ] };
+    // Right side of keyboard
 
-    //key <LALT> { [ Multi_Key ] };
-    //key <HOME> { [] };
+    key <BKSL> { [ Delete ]};
+    key <AC11> { [ Shift_R ] };
+    key <RTSH> { [ BackSpace ]};
 
-    // Thumb row: lower right
-    key.type = "FOUR_LEVEL";
-    key <SPCE> { [ space, space, Escape, Escape ] };
-
+    // Right thumb row
     key.type = "ONE_LEVEL";
-    key <RTRN> { [ Return ] };
     key <PGDN> { [ ISO_Level5_Shift ]};
 
-    // Thumb row: lower left
+    // Left thumb row
     key <BKSP> { [ ISO_Level3_Shift ] };
     key <DELE> { [ Control_L ] };
     key <END>  { [ Super_L ] };
 
-    // Keyboard row number: +2
-    key.type = "ONE_LEVEL";
-    key <AE12> { [ Escape ] };
-
-    key.type = "TWO_LEVEL";
-    key <AE11> { [ Tab, ISO_Left_Tab ] };
-
-    // Keyboard row number: +1
-    key.type = "TWO_LEVEL";
-    key <TAB>  { [ udiaeresis, Udiaeresis ] };
-
-    // Keyboard row number: +1
+    // Keyboard row number: -2
     key.type = "EIGHT_LEVEL";
-    key <BKSL> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
-
-    // Keyboard row number: 0 (home row)
-    key.type = "ONE_LEVEL";
-    key <CAPS> { [ Shift_L ] };
-
-    key.type = "ONE_LEVEL";
-    key <AC11> { [ Shift_R ] };
-
-    // Keyboard row number: -1
-    key.type = "EIGHT_LEVEL";
-    key <LFSH> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
-
+    key <TLDE> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
+    key.type = "TWO_LEVEL";
+    key <LSGT> { [ udiaeresis, Udiaeresis ] };
     key.type = "THREE_LEVEL";
-    key <RTSH> { [ ssharp, U1D7D9, section ] };
-
-    // Keyboard row number: -2 (very bad for your tendons, don't use it!)
-    key.type = "ONE_LEVEL";
-    key <TLDE> { [ Delete ] };
-    key <LSGT> { [ BackSpace] };
-    key <AD11> { [ Delete ] };
-    key <AD12> { [ BackSpace ] };
+    key <AD11> { [ ssharp, U1D7D9, section ] };
+    key.type = "EIGHT_LEVEL";
+    key <AD12> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
 
 };
 
