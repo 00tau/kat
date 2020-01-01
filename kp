@@ -3,18 +3,17 @@ xkb_symbols "basic" {
 
     name[Group1]="Katzenpfote";
 
-    key.type = "FOUR_LEVEL";
-    key <SPCE> { [ space, space, Escape, Escape ] };
-
-    // Keyboard row number: +2
-
     key.type = "ONE_LEVEL";
 
-    key <AE12> { [ Escape ] };
-    key <AE11> { [ Return ] };
+    key <ESC>  { [ Escape ] };
+
+    key.type = "FOUR_LEVEL";
+    
+    key <SPCE> { [ space, space, Escape, Escape ] };
 
     key.type = "THREE_LEVEL";
 
+    // Keyboard row number: +2
     key <AE01> { [ 7, U210D, dead_diaeresis ] };
     key <AE02> { [ 5, U1D539, dead_ogonek ] };
     key <AE03> { [ 3, U1D54D, dead_cedilla ] };
@@ -39,6 +38,9 @@ xkb_symbols "basic" {
     key <AD08> { [ c, C, backslash, U2219, Greek_chi, Greek_CHI ] };
     key <AD09> { [ r, R, ampersand, U2227, Greek_rho, Greek_RHO ] };
     key <AD10> { [ l, L, U2229, U22C2, Greek_lambda, Greek_LAMBDA ] };
+    key <AD11> { [ udiaeresis, Udiaeresis, U00F8, U00D8, U0153, U0152 ] };
+    key <AD12> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
+    key <BKSL> { [ backslash, bar, U00F8, U00D8, U0153, U0152 ] };
 
     // Keyboard row number: 0
     key <AC01> { [ a, A, asciitilde, U2248, Greek_alpha, Greek_ALPHA ] };
@@ -51,9 +53,12 @@ xkb_symbols "basic" {
     key <AC08> { [ t, T, slash, U2218, Greek_tau, Greek_TAU ] };
     key <AC09> { [ n, N, greater, U2265, Greek_nu, Greek_NU ] };
     key <AC10> { [ s, S, asciicircum, U221D, Greek_sigma, Greek_SIGMA ] };
-
+    key.type = "THREE_LEVEL";
+    key <AC11> { [ ssharp, U1D7D9, section ] };
+    
     // Keyboard row number: -1
-    key <AB01> { [ apostrophe, quotedbl, U201C, U2203, U210D ] };
+    key <LSGT> { [ apostrophe, quotedbl, U201C, U2203, U210D ] };
+    key <AB01> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
     key <AB02> { [ q, Q, U00AB, U2225, U2115 ] };
     key <AB03> { [ j, J, equal, U2260, U2102, cent ] };
     key <AB04> { [ k, K, braceleft, U222B, Greek_kappa, Greek_KAPPA ] };
@@ -64,7 +69,11 @@ xkb_symbols "basic" {
     key <AB09> { [ v, V, U00BB, U22A5, Greek_theta, Greek_THETA ] };
     key <AB10> { [ z, Z, U201D, U2200, Greek_zeta, Greek_ZETA ] };
 
-    include "level3(modifier_mapping)"
+    key <RALT> { [ ISO_Level3_Shift ] };
+    key <PGDN> { [ ISO_Level5_Shift ] };
+    key <END>  { [ Super_L ] };
+
+    include "level3(ralt_switch)"
     include "level5(modifier_mapping)"
 
 };
@@ -76,117 +85,30 @@ xkb_symbols "kinesis" {
 
     name[Group1]= "Katzenpfote on the Kinesis Advantage";
 
-    // Alphanumeric section
-
     key.type = "ONE_LEVEL";
+    key <AE12> { [ Escape ] };
 
-    // Left side of keyboard
-
-    key <CAPS> { [ Shift_L ] };
-    key <LFSH> { [ Caps_Lock ] };
-
-    // Right side of keyboard
-
-    key <BKSL> { [ Delete ]};
-    key <AC11> { [ Shift_R ] };
-    key <RTSH> { [ BackSpace ]};
-
-    // Right thumb row
-    key.type = "ONE_LEVEL";
-    key <PGDN> { [ ISO_Level5_Shift ]};
-
-    // Left thumb row
-    key <BKSP> { [ ISO_Level3_Shift ] };
-    key <DELE> { [ Control_L ] };
-    key <END>  { [ Super_L ] };
-
-    // Keyboard row number: -2
-    key.type = "EIGHT_LEVEL";
-    key <TLDE> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
     key.type = "TWO_LEVEL";
-    key <LSGT> { [ udiaeresis, Udiaeresis ] };
-    key.type = "THREE_LEVEL";
-    key <AD11> { [ ssharp, U1D7D9, section ] };
-    key.type = "EIGHT_LEVEL";
-    key <AD12> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
-
-};
-
-partial default alphanumeric_keys
-xkb_symbols "typematrix" {
-
-    include "kp(basic)"
-
-    name[Group1]= "Katzenpfote on the TypeMatrix";
-
-    // Row: +2
-    key.type = "TWO_LEVEL";
-
-    key <TLDE> { [ Tab, ISO_Left_Tab ] };
-
-    key.type = "ONE_LEVEL";
-
-    key <AE12> { [ Alt_L ] };
-    key <AE11> { [ Alt_R] };
-
-    // Keyboard row number: +1
-    key.type = "TWO_LEVEL";
-
-    key <TAB>  { [ udiaeresis, Udiaeresis ] };
-
-    // Keyboard row number: +1
-    key.type = "EIGHT_LEVEL";
-
-    key <BKSL> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
-
-    // Keyboard row number: 0 (home row)
-    key.type = "ONE_LEVEL";
-
-    key <CAPS> { [ Shift_L ] };
-
-    // Row: +1
-    key.type = "TWO_LEVEL";
-
-    key <TAB>  { [ udiaeresis, Udiaeresis ] };
-    key <AD11> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
-    key <AD12> { [ ISO_Level3_Shift ] };
-
-    // Row: 0
-    key.type = "THREE_LEVEL";
-
-    key <AC11> { [ ssharp, U1D7D9, section ] };
-
-    // Row: -1
-    key.type = "EIGHT_LEVEL";
-
-    key <BKSL> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
-
-    // Row: -2
-    key.type = "ONE_LEVEL";
-
-    key <LALT> { [ ISO_Level3_Shift ] };
-    key <RALT> { [ ISO_Level5_Shift ] };
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
+    key <AE11> { [ Tab, ISO_Left_Tab ] };
 
 };
 
 partial default alphanumeric_keys
 xkb_symbols "nogrid" {
 
+    include "kp(basic)"
+
     name[Group1]= "Katzenpfote on a staggered keyboard";
+
+    key.type = "ONE_LEVEL";
+
+    key <LCTL> { [ Caps_Lock ] };
+    key <CAPS> { [ Control_L ] };
 
     // Alphanumeric section
 
-    key <ESC>  { [ Escape ] };
-    key <LCTL> { [ Caps_Lock ] };
-    key <RALT> { [ Alt_L ] };
-
-    key <SPCE> { [ space, space, Escape, Escape ] };
-
     // Keyboard row number: +2
-    key <TLDE> { [ Home ] };
+    key <TLDE> { [ Escape ] };
     key <AE01> { [ Super_L ] };
     key <AE02> { [ 7 ] };
     key <AE03> { [ 5 ] };
