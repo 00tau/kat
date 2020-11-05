@@ -8,7 +8,7 @@ xkb_symbols "basic" {
     key <ESC>  { [ Escape ] };
 
     key.type = "FOUR_LEVEL";
-    
+
     key <SPCE> { [ space, space, Escape, Escape ] };
 
     key.type = "THREE_LEVEL";
@@ -40,7 +40,7 @@ xkb_symbols "basic" {
     key <AD10> { [ l, L, U2229, U22C2, Greek_lambda, Greek_LAMBDA ] };
     key <AD11> { [ udiaeresis, Udiaeresis, U00F8, U00D8, U0153, U0152 ] };
     key <AD12> { [ odiaeresis, Odiaeresis, U00F8, U00D8, U0153, U0152 ] };
-    key <BKSL> { [ backslash, bar, U00F8, U00D8, U0153, U0152 ] };
+    key <BKSL> { [ grave, acute, dead_grave, dead_acute ] };
 
     // Keyboard row number: 0
     key <AC01> { [ a, A, asciitilde, U2248, Greek_alpha, Greek_ALPHA ] };
@@ -55,7 +55,7 @@ xkb_symbols "basic" {
     key <AC10> { [ s, S, asciicircum, U221D, Greek_sigma, Greek_SIGMA ] };
     key.type = "THREE_LEVEL";
     key <AC11> { [ ssharp, U1D7D9, section ] };
-    
+
     // Keyboard row number: -1
     key <LSGT> { [ apostrophe, quotedbl, U201C, U2203, U210D ] };
     key <AB01> { [ adiaeresis, Adiaeresis, U00E5, U00C5, U00E6, U00C6 ] };
@@ -70,8 +70,6 @@ xkb_symbols "basic" {
     key <AB10> { [ z, Z, U201D, U2200, Greek_zeta, Greek_ZETA ] };
 
     key <RALT> { [ ISO_Level3_Shift ] };
-    key <PGDN> { [ ISO_Level5_Shift ] };
-    key <END>  { [ Super_L ] };
 
     include "level3(ralt_switch)"
     include "level5(modifier_mapping)"
@@ -86,6 +84,8 @@ xkb_symbols "kinesis" {
     name[Group1]= "Katzenpfote on the Kinesis Advantage";
 
     key.type = "ONE_LEVEL";
+    key <PGDN> { [ ISO_Level5_Shift ] };
+    key <END>  { [ Super_L ] };
     key <AE12> { [ Escape ] };
 
     key.type = "TWO_LEVEL";
@@ -107,19 +107,18 @@ xkb_symbols "nogrid" {
 
     // Alphanumeric section
 
-    // Keyboard row number: +2
     key <TLDE> { [ Escape ] };
     key <AE01> { [ Super_L ] };
-    key <AE02> { [ 7 ] };
-    key <AE03> { [ 5 ] };
-    key <AE04> { [ 3 ] };
-    key <AE05> { [ 1 ] };
-    key <AE06> { [ 9 ] };
-    key <AE07> { [ 0 ] };
-    key <AE08> { [ 2 ] };
-    key <AE09> { [ 4 ] };
-    key <AE10> { [ 6 ] };
-    key <AE11> { [ 8 ] };
+    key <AE02> { [ 7, U210D, dead_diaeresis ] };
+    key <AE03> { [ 5, U1D539, dead_ogonek ] };
+    key <AE04> { [ 3, U1D54D, dead_cedilla ] };
+    key <AE05> { [ 1, U1D53C, acute ] };
+    key <AE06> { [ 9, U1D53D, dead_acute ] };
+    key <AE07> { [ 0, U2102, dead_grave ] };
+    key <AE08> { [ 2, U211D, grave ] };
+    key <AE09> { [ 4, U2115, EuroSign ] };
+    key <AE10> { [ 6, U2124, cent ] };
+    key <AE11> { [ 8, U211A, sterling ] };
     key <AE12> { [ Tab, ISO_Left_Tab, Tab, ISO_Left_Tab ] };
 
 };
