@@ -53,8 +53,6 @@ xkb_symbols "basic" {
     key <AC08> { [ t, T, slash, U2218, Greek_tau, Greek_TAU ] };
     key <AC09> { [ n, N, greater, U2265, Greek_nu, Greek_NU ] };
     key <AC10> { [ s, S, asciicircum, U221D, Greek_sigma, Greek_SIGMA ] };
-    key.type = "THREE_LEVEL";
-    key <AC11> { [ ssharp, U1D7D9, section ] };
 
     // Keyboard row number: -1
     key <LSGT> { [ apostrophe, quotedbl, U201C, U2203, U210D ] };
@@ -69,6 +67,10 @@ xkb_symbols "basic" {
     key <AB09> { [ v, V, U00BB, U22A5, Greek_theta, Greek_THETA ] };
     key <AB10> { [ z, Z, U201D, U2200, Greek_zeta, Greek_ZETA ] };
 
+    key.type = "THREE_LEVEL";
+    key <AC11> { [ ssharp, U1D7D9, section ] };
+
+    key.type = "ONE_LEVEL";
     key <RALT> { [ ISO_Level3_Shift ] };
 
     include "level3(ralt_switch)"
